@@ -10,7 +10,7 @@ const App = () => {
   const [gradient, setGradient] = useState("bg-gray-100");
 
   return (
-    <div className='transition ease-in-out duration-1000'>
+    <div>
 
       <Navbar gradient={gradient}/>
 
