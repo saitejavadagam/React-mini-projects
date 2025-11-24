@@ -4,3 +4,14 @@ body {
     margin: 0;
     padding: 0;
 }
+
+@layer components {
+  .navbar > *:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: 0.2s;
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
+  }
+}
+
+
