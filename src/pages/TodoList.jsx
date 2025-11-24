@@ -25,7 +25,7 @@ const TodoList = () => {
 
 
   return (
-    <div className='min-h-screen bg-linear-to-br from-purple-500 to-indigo-600 flex flex-col items-center p-10 text-white'>
+    <div className='min-h-screen pt-25 bg-linear-to-br from-purple-500 to-indigo-600 flex flex-col items-center p-10 text-white'>
 
         <h1 className='font-extrabold text-5xl mb-10 drop-shadow-lg'>Todo List</h1>
 
