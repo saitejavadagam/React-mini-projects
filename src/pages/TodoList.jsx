@@ -1,8 +1,11 @@
 import {useEffect, useState} from 'react'
 
-const TodoList = () => {
+const TodoList = ({setGradient}) => {
 
     const [input, setInput] = useState("");
+
+    const gradient = "bg-linear-to-r to-purple-700 from-indigo-700"
+
     const [todos,setTodos] = useState(()=>{
         const saved = localStorage.getItem("todos");
 
@@ -20,12 +23,16 @@ const TodoList = () => {
     }
 
     useEffect(()=>{
+      setGradient(gradient);
+    },[])
+
+    useEffect(()=>{
         localStorage.setItem("todos",JSON.stringify(todos));
     },[todos]);
 
 
   return (
-    <div className='min-h-screen pt-25 bg-linear-to-br from-purple-500 to-indigo-600 flex flex-col items-center p-10 text-white'>
+    <div className={`min-h-screen pt-25 bg-linear-to-br from-purple-500 to-indigo-600 flex flex-col items-center p-10 text-white`}>
 
         <h1 className='font-extrabold text-5xl mb-10 drop-shadow-lg'>Todo List</h1>
 

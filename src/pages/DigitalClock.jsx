@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
-const DigitalClock = () => {
+const DigitalClock = ({setGradient}) => {
     const [time,setTime] = useState(new Date().toLocaleTimeString());
+
+    useEffect(()=>{
+      setGradient("bg-linear-to-r from-yellow-500 to-green-500");
+    },[]);
 
     useEffect(()=>{
         const timer = setInterval(()=>{
