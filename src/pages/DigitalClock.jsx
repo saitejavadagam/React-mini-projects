@@ -17,11 +17,15 @@ const DigitalClock = ({setGradient}) => {
     },[]);
 
   return (
-    <div className='flex flex-col items-center gap-10 font-bold text-5xl'>
-        <h1 className='mt-10'>Digital Clock</h1>
-        <p>{time}</p>
+   <div className='h-screen bg-linear-to-br from-yellow-300 to-green-300 font-bold text-5xl p-5 text-white/90 text-shadow-lg'>
 
+    <h1 align="center" className='mt-10'>Digital Clock</h1>
+
+    <div className='bg-black/20 backdrop-blur-md p-5 rounded-2xl shadow-md max-w-2xl mx-auto mt-10 flex justify-center text-8xl py-10'>
+        <p className=''>{time}</p>
     </div>
+
+   </div>
   )
 }
 
