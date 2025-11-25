@@ -2,6 +2,7 @@ import React,{useState, Suspense} from 'react'
 import { Route,Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
+import Loader from './components/Loader';
 
 const Counter = React.lazy(()=>import("./pages/Counter"));
 const DigitalClock = React.lazy(()=>import("./pages/DigitalClock"));
@@ -14,31 +15,16 @@ const App = () => {
 
   return (
     <div>
+      <Navbar gradient={gradient} />
 
-      <Navbar gradient={gradient}/>
-
-      <Routes>
-        <Route path="/counter" element={
-          <Suspense>
-            <Counter setGradient={setGradient}/>
-          </Suspense>
-        } />
-        <Route path="/digitalclock" element={
-          <Suspense>
-            <DigitalClock setGradient={setGradient}/>
-          </Suspense>
-        } />
-        <Route path="/todolist" element={
-          <Suspense>
-            <TodoList setGradient={setGradient}/>
-          </Suspense>
-        } />
-        <Route path="/calculator" element={
-          <Suspense>
-            <Calculator setGradient={setGradient}/>
-          </Suspense>
-        } />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/counter" element={<Counter setGradient={setGradient} />} />
+          <Route path="/digitalclock" element={<DigitalClock setGradient={setGradient} />} />
+          <Route path="/todolist" element={<TodoList setGradient={setGradient} />} />
+          <Route path="/calculator" element={<Calculator setGradient={setGradient} />} />
+        </Routes>
+      </Suspense>
     </div>
   )
 }
