@@ -9,8 +9,7 @@ const Navbar = ({gradient}) => {
         <Link to="/counter">Counter</Link>
         <Link to="/digitalclock">Digital Clock</Link>
         <Link to="/todolist">Todo List</Link>
-        <Link to="/calculator">Calculator</Link>
-        <Link to="/quotes">Quotes</Link>
+        <Link to="/weather">Weather</Link>
     </nav>
   )
 }

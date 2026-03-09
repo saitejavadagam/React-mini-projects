@@ -7,7 +7,7 @@ import Loader from './components/Loader';
 const Counter = React.lazy(()=>import("./pages/Counter"));
 const DigitalClock = React.lazy(()=>import("./pages/DigitalClock"));
 const TodoList = React.lazy(()=>import("./pages/TodoList"));
-const Calculator = React.lazy(()=>import("./pages/Calculator"));
+const Weather = React.lazy(()=>import("./pages/Weather"));
 
 const App = () => {
 
@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/counter" element={<Counter setGradient={setGradient} />} />
           <Route path="/digitalclock" element={<DigitalClock setGradient={setGradient} />} />
           <Route path="/todolist" element={<TodoList setGradient={setGradient} />} />
-          <Route path="/calculator" element={<Calculator setGradient={setGradient} />} />
+          <Route path="/weather" element={<Weather />} />
         </Routes>
       </Suspense>
     </div>
