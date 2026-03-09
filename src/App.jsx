@@ -22,7 +22,7 @@ const App = () => {
           <Route path="/counter" element={<Counter setGradient={setGradient} />} />
           <Route path="/digitalclock" element={<DigitalClock setGradient={setGradient} />} />
           <Route path="/todolist" element={<TodoList setGradient={setGradient} />} />
-          <Route path="/weather" element={<Weather />} />
+          <Route path="/weather" element={<Weather setGradient={setGradient} />} />
         </Routes>
       </Suspense>
     </div>

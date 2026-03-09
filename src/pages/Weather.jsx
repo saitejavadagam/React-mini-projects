@@ -1,15 +1,20 @@
-import { lazy, useState } from 'react';
+import { lazy, useState, useEffect } from 'react';
 import { Search, Wind, Droplets } from 'lucide-react';
 import checkWeather from '../api/checkWeather'
 import getWeatherBackground from "../api/getWeatherBackground"
 const WeatherIcon = lazy(() => import('../components/WeatherIcon'));
 
 
-const Weather = () => {
+const Weather = ({setGradient}) => {
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState(null);
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
+
+    const gradient = "bg-linear-to-r to-green-300 from-green-600";
+      useEffect(()=>{
+        setGradient(gradient);
+      });
 
     const handleSearch = async () => {
 
