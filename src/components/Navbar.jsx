@@ -8,6 +8,7 @@ const Navbar = ({gradient}) => {
     >
         <Link to="/counter">Counter</Link>
         <Link to="/digitalclock">Digital Clock</Link>
+        <Link to="/analogclock">Analog Clock</Link>
         <Link to="/todolist">Todo List</Link>
         <Link to="/weather">Weather</Link>
     </nav>

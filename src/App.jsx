@@ -3,6 +3,7 @@ import { Route,Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import Loader from './components/Loader';
+import AnalogClock from './pages/AnalogClock';
 
 const Counter = React.lazy(()=>import("./pages/Counter"));
 const DigitalClock = React.lazy(()=>import("./pages/DigitalClock"));
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/counter" element={<Counter setGradient={setGradient} />} />
           <Route path="/digitalclock" element={<DigitalClock setGradient={setGradient} />} />
+          <Route path="/analogclock" element={<AnalogClock setGradient={setGradient} />} />
           <Route path="/todolist" element={<TodoList setGradient={setGradient} />} />
           <Route path="/weather" element={<Weather setGradient={setGradient} />} />
         </Routes>
