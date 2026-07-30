@@ -1,14 +1,15 @@
-import React,{useState, Suspense} from 'react'
-import { Route,Routes } from 'react-router-dom'
+import React, { useState, Suspense } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import Loader from './components/Loader';
 import AnalogClock from './pages/AnalogClock';
 
-const Counter = React.lazy(()=>import("./pages/Counter"));
-const DigitalClock = React.lazy(()=>import("./pages/DigitalClock"));
-const TodoList = React.lazy(()=>import("./pages/TodoList"));
-const Weather = React.lazy(()=>import("./pages/Weather"));
+const Home = React.lazy(() => import('./pages/Home'));
+const Counter = React.lazy(() => import("./pages/Counter"));
+const DigitalClock = React.lazy(() => import("./pages/DigitalClock"));
+const TodoList = React.lazy(() => import("./pages/TodoList"));
+const Weather = React.lazy(() => import("./pages/Weather"));
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
 
       <Suspense fallback={<Loader />}>
         <Routes>
+          <Route path="/" element={<Home setGradient={setGradient} />} />
           <Route path="/counter" element={<Counter setGradient={setGradient} />} />
           <Route path="/digitalclock" element={<DigitalClock setGradient={setGradient} />} />
           <Route path="/analogclock" element={<AnalogClock setGradient={setGradient} />} />
