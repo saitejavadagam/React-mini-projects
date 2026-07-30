@@ -1,5 +1,6 @@
 import Card from "../components/Card";
-import {cardImages} from '../assets/home/cards/cardImages';
+import { cardImages } from '../assets/home/cards/cardImages';
+import { useEffect } from "react";
 
 const cards = [
     {
@@ -35,14 +36,20 @@ const cards = [
 ];
 
 
-export default function Home() {
+export default function Home({ setGradient }) {
+
+    useEffect(() => {
+        setGradient("bg-gradient-to-r from-[#1e3c72] via-[#2a5298] to-[#141e30]");
+    }, []);
+
+
     return (
         <div
-            className="min-h-screen bg-linear-to-br from-blue-500 to-violet-500 p-10"
+            className="min-h-screen bg-linear-to-b from-[#173670] to-[#2c6eb9]"
         >
 
             <h1
-                className="mb-8 text-center text-4xl font-bold text-white"
+                className="mb-8 text-center text-4xl font-bold text-white pt-10"
             >
                 React Mini Projects
             </h1>

@@ -23,9 +23,7 @@ export default function Card({ card }) {
                             flex-col
                             justify-start
                             items-center
-                            bg-linear-to-br
-                            from-purple-600/70
-                            to-blue-600/70
+                           bg-linear-to-br from-[#1e3c72]/80 via-[#2a5298]/80 to-[#141e30]/80
                             backdrop-blur-xs
                             transition-all
                             duration-500
