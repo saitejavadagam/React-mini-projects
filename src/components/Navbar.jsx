@@ -5,7 +5,7 @@ import { House } from 'lucide-react';
 const Navbar = ({ gradient }) => {
   return (
     <nav
-      className={`${gradient} navbar h-15 text-white font-semibold text-2xl flex items-center px-15 gap-10 shadow-md shadow-black/40 text-shadow-md`}
+      className={`${gradient} navbar relative h-15 text-white font-semibold text-2xl flex items-center px-15 gap-10 shadow-md shadow-black/30 text-shadow-md z-10`}
     >
       <Link to="/"><House size={24} /></Link>
       <Link to="/counter">Counter</Link>
