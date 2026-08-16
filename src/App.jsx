@@ -3,17 +3,18 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar'
 import Loader from './components/Loader';
-import AnalogClock from './pages/AnalogClock';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const Counter = React.lazy(() => import("./pages/Counter"));
 const DigitalClock = React.lazy(() => import("./pages/DigitalClock"));
+const AnalogClock = React.lazy(() => import("./pages/AnalogClock"));
 const TodoList = React.lazy(() => import("./pages/TodoList"));
 const Weather = React.lazy(() => import("./pages/Weather"));
+const Calculator = React.lazy(() => import("./pages/Calculator"));
 
 const App = () => {
 
-  const [gradient, setGradient] = useState("bg-gradient-to-r from-teal-500 to-cyan-500");
+  const [gradient, setGradient] = useState("bg-gradient-to-r from-[#1e3c72] via-[#2a5298] to-[#141e30]");
 
   return (
     <div>
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/analogclock" element={<AnalogClock setGradient={setGradient} />} />
           <Route path="/todolist" element={<TodoList setGradient={setGradient} />} />
           <Route path="/weather" element={<Weather setGradient={setGradient} />} />
+          <Route path="/calculator" element={<Calculator setGradient={setGradient} />} />
         </Routes>
       </Suspense>
     </div>
