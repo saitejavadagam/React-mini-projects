@@ -3,17 +3,17 @@ import styled from 'styled-components';
 const Loader = () => {
   return (
     <div className='flex justify-center items-center h-screen'>
-    <StyledWrapper>
-      <div className="loader">
-        <div className="loader-square" />
-        <div className="loader-square" />
-        <div className="loader-square" />
-        <div className="loader-square" />
-        <div className="loader-square" />
-        <div className="loader-square" />
-        <div className="loader-square" />
-      </div>
-    </StyledWrapper>
+      <StyledWrapper>
+        <div className="loader">
+          <div className="loader-square" />
+          <div className="loader-square" />
+          <div className="loader-square" />
+          <div className="loader-square" />
+          <div className="loader-square" />
+          <div className="loader-square" />
+          <div className="loader-square" />
+        </div>
+      </StyledWrapper>
     </div>
   );
 }

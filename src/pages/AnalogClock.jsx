@@ -3,12 +3,14 @@ import SecondHand from '../components/SecondHand';
 import MinuteHand from '../components/MinuteHand';
 import HourHand from '../components/HourHand';
 
-const AnalogClock = ({setGradient}) => {
+const AnalogClock = ({ setGradient }) => {
 
 
-  useEffect(()=>{
-        setGradient("bg-linear-to-r from-green-400 to-teal-500")
-    },[])
+  const gradient = "bg-linear-to-r from-green-400 to-teal-500";
+
+  useEffect(() => {
+    setGradient(gradient);
+  }, [setGradient])
 
   const fontSize = "8";
   const [time, setTime] = useState(new Date());
@@ -35,7 +37,7 @@ const AnalogClock = ({setGradient}) => {
 
   return (
     <div style={{ textAlign: "center" }} className='bg-white min-h-screen'>
-      <h3>{time.toLocaleTimeString('en-US',{hour12:true})}</h3>
+      <h3>{time.toLocaleTimeString('en-US', { hour12: true })}</h3>
       <svg viewBox="0 0 160 100" width="100vw" height="90vh">
         <g transform="translate(80,50)" fontSize={fontSize}>
           <circle r="42" fill="none" stroke="black" strokeWidth="2" />
@@ -51,13 +53,13 @@ const AnalogClock = ({setGradient}) => {
           ))}
 
           {/* Hour hand */}
-          <HourHand hours={time.getHours()} minutes={time.getMinutes()}/>
+          <HourHand hours={time.getHours()} minutes={time.getMinutes()} />
 
           {/* Minute hand */}
-          <MinuteHand minutes={time.getMinutes()}/>
+          <MinuteHand minutes={time.getMinutes()} />
 
           {/* Seconds hand */}
-          <SecondHand seconds={time.getSeconds()}/>
+          <SecondHand seconds={time.getSeconds()} />
 
           <circle r="2" fill="black" />
         </g>

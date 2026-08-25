@@ -1,4 +1,4 @@
-import { CloudSun, Sun, CloudRain, CloudDrizzle, CloudFog, CloudSnow} from 'lucide-react'
+import { CloudSun, Sun, CloudRain, CloudDrizzle, CloudFog, CloudSnow } from 'lucide-react'
 
 const WeatherIcon = (condition) => {
     switch (condition) {

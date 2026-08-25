@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react';
-import {evaluate} from 'mathjs'; 
+import { evaluate } from 'mathjs';
 
 const btnValues = [
   ["C", "+-", "%", "/"],
@@ -50,7 +50,7 @@ const Calculator = ({ setGradient }) => {
             btnValues.flat().map((btn, i) => (
               <button
                 key={i}
-                className={`border-none outline-none text-2xl text-white font-bold cursor-pointer rounded-[10px] shadow-md ${btn === '=' ? "bg-[#f33d1d] hover:bg-[#e4270f] col-[3/5]" :"bg-[#503cd1]  hover:bg-[#3d2bb8]"}`}
+                className={`border-none outline-none text-2xl text-white font-bold cursor-pointer rounded-[10px] shadow-md ${btn === '=' ? "bg-[#f33d1d] hover:bg-[#e4270f] col-[3/5]" : "bg-[#503cd1]  hover:bg-[#3d2bb8]"}`}
                 onClick={btn === '=' ? compute : btn === 'C' ? clear : handleClick}
               >
                 {btn}
