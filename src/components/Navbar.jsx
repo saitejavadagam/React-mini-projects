@@ -16,6 +16,7 @@ const Navbar = ({ gradient }) => {
       <Link to="/todolist">Todo List</Link>
       <Link to="/calculator">Calculator</Link>
       <Link to="/weather">Weather</Link>
+      <Link to="/quotes">Quotes</Link>
     </nav>
   )
 }

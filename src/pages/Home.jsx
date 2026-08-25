@@ -39,6 +39,12 @@ const cards = [
         image: cardImages.calculator,
         description: "Calculator application",
     },
+    {
+        title: "Quotes",
+        path: "/quotes",
+        image: cardImages.calculator,
+        description: "Some random quotations",
+    },
 ];
 
 
@@ -46,7 +52,7 @@ export default function Home({ setGradient }) {
 
     useEffect(() => {
         setGradient("bg-gradient-to-r from-[#1e3c72] via-[#2a5298] to-[#141e30]");
-    }, []);
+    }, [setGradient]);
 
 
     return (

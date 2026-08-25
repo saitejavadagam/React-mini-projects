@@ -11,6 +11,7 @@ const AnalogClock = React.lazy(() => import("./pages/AnalogClock"));
 const TodoList = React.lazy(() => import("./pages/TodoList"));
 const Weather = React.lazy(() => import("./pages/Weather"));
 const Calculator = React.lazy(() => import("./pages/Calculator"));
+const Quotes = React.lazy(() => import("./pages/Quotes"));
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path="/todolist" element={<TodoList setGradient={setGradient} />} />
           <Route path="/weather" element={<Weather setGradient={setGradient} />} />
           <Route path="/calculator" element={<Calculator setGradient={setGradient} />} />
+          <Route path="/quotes" element={<Quotes setGradient={setGradient} />} />
         </Routes>
       </Suspense>
     </div>
