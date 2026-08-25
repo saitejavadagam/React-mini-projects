@@ -23,7 +23,7 @@ const cards = [
     },
     {
         title: "Todo List",
-        path: "/todo",
+        path: "/todolist",
         image: cardImages.todo_list,
         description: "Manage your tasks",
     },
@@ -51,7 +51,7 @@ export default function Home({ setGradient }) {
 
     return (
         <div
-            className="min-h-screen bg-linear-to-b from-[#173670] to-[#2c6eb9]"
+            className="min-h-screen bg-linear-to-b from-[#173670] to-[#2c6eb9] py-10"
         >
 
             <h1

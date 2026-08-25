@@ -34,8 +34,8 @@ const AnalogClock = ({setGradient}) => {
   }, []);
 
   return (
-    <div style={{ textAlign: "center" }} className='bg-white'>
-      <h3>{time.toLocaleTimeString()}</h3>
+    <div style={{ textAlign: "center" }} className='bg-white min-h-screen'>
+      <h3>{time.toLocaleTimeString('en-US',{hour12:true})}</h3>
       <svg viewBox="0 0 160 100" width="100vw" height="90vh">
         <g transform="translate(80,50)" fontSize={fontSize}>
           <circle r="42" fill="none" stroke="black" strokeWidth="2" />
