@@ -4,6 +4,12 @@ import { useEffect } from "react";
 
 const cards = [
     {
+        title: "Tic Tac Toe",
+        path: "/tic-tac-toe",
+        image: cardImages.counter,
+        description: "Tic Tac Toe game"
+    },
+    {
         title: "Counter",
         path: "/counter",
         image: cardImages.counter,

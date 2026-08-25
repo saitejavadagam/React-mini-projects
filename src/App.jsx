@@ -6,6 +6,7 @@ import Loader from './components/Loader';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const Counter = React.lazy(() => import("./pages/Counter"));
+const TicTacToe = React.lazy(() => import("./pages/TicTacToe"));
 const DigitalClock = React.lazy(() => import("./pages/DigitalClock"));
 const AnalogClock = React.lazy(() => import("./pages/AnalogClock"));
 const TodoList = React.lazy(() => import("./pages/TodoList"));
@@ -24,6 +25,7 @@ const App = () => {
       <Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home setGradient={setGradient} />} />
+          <Route path="/tic-tac-toe" element={<TicTacToe setGradient={setGradient} />} />
           <Route path="/counter" element={<Counter setGradient={setGradient} />} />
           <Route path="/digitalclock" element={<DigitalClock setGradient={setGradient} />} />
           <Route path="/analogclock" element={<AnalogClock setGradient={setGradient} />} />
