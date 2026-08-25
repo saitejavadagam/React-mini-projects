@@ -6,7 +6,7 @@ const cards = [
     {
         title: "Tic Tac Toe",
         path: "/tic-tac-toe",
-        image: cardImages.counter,
+        image: cardImages.tic_tac_toe,
         description: "Tic Tac Toe game"
     },
     {
