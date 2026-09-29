@@ -1,5 +1,6 @@
 import React, { useState, Suspense } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { Analytics } from '@vercel/analytics/react'
 import './App.css'
 import Navbar from './components/Navbar'
 import Loader from './components/Loader';
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/quotes" element={<Quotes setGradient={setGradient} />} />
         </Routes>
       </Suspense>
+      <Analytics />
     </div>
   )
 }
